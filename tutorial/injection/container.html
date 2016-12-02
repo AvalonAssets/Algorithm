@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Inversion of Control Container </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Inversion of Control Container ">
+    <meta name="generator" content="docfx 2.8.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="inversion-of-control-container">Inversion of Control Container</h1>
+              
+<h2 id="introduction">Introduction</h2>
+<p>Inversion of Control (IoC) is a design principle in which custom-written portions of a computer program receive the flow of control from a generic framework.</p>
+<p>A software architecture with this design inverts control as compared to traditional procedural programming: in traditional programming, the custom code that expresses the purpose of the program calls into reusable libraries to take care of generic tasks, but with inversion of control, it is the framework that calls into the custom, or task-specific, code.</p>
+<p>Inversion of control is used to increase modularity of the program and make it extensible.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>For simple IoC container allows you to configure which concrete class to be used for the required interface. </p>
+<p>First, you have to register it to the container.</p>
+<blockquote><p>If the concrete class has more than one constructor, container will try all of them until it can resolve it. See <a href="#precise-registration">precise registration</a> for more information.</p>
+</blockquote>
+<pre><code class="lang-csharp">container.RegisterType&lt;ICustomInterface, CustomConcreteClass&gt;();
+</code></pre><p>Then, when you need <code>ICustomInterface</code>, you call the container instead of initialize it yourself.</p>
+<pre><code class="lang-csharp">var obj = container.Resolve&lt;ICustomInterface&gt;();
+</code></pre><p>However, this is not the usage. As you apply dependency injection, the dependency can be deeply nested. But the container can resolve all of them if it has registered or it has a default value.</p>
+<pre><code class="lang-csharp">// Before
+var svc = new ShippingService(new ProductLocator(), new PricingService(), 
+        new InventoryService(), new TrackingRepository(new ConfigProvider()), 
+        new Logger(new EmailLogger(new ConfigProvider())));
+// After
+var svc = container&lt;IShippingService&gt;();
+</code></pre><p>There is a the default container in <em>Vola</em></p>
+<pre><code class="lang-csharp">var container = Containers.Default();
+</code></pre><p>It registers the following interfaces:</p>
+<ul>
+<li>IContainer</li>
+<li>IEventAggregator</li>
+<li>IEventHandlerFactory</li>
+</ul>
+<h2 id="precise-registration">Precise Registration</h2>
+<p>Although IoC Container resolve the type for you, but you may want control on using which constructor or method, the value of parameters. By default, IoC Container try every constructors before it throws an exception. If the constructor needs parameters, it looks for the given parameters, tries to resolve it, or uses the default value.</p>
+<p>There are several registration types. Different registration types allows you to initialize instances more flexible.</p>
+<h3 id="type">Type</h3>
+<p>This is the most common way to register. Using <code>IContainer.RegisterType</code> to register a concrete type for the interface. To custom how to initialize, you need (constructor)[#constructor].</p>
+<h3 id="instance">Instance</h3>
+<p><code>IContainer.RegisterInstance</code> allows you to use the same instance every time some objects ask for resolve.</p>
+<h3 id="name">Name</h3>
+<p>Naming allows multiple registration to the same request type. And it can also resolve by name. Naming is supported in both type and instance registration.</p>
+<pre><code class="lang-csharp">container.RegisterType&lt;ICustomInterface, CustomConcreteClass&gt;();
+container.RegisterType&lt;ICustomInterface, CustomConcreteClass2&gt;(&quot;2&quot;);
+var obj1 = container.Resolve&lt;ICustomInterface&gt;(); // CustomConcreteClass
+var obj2 = container.Resolve&lt;ICustomInterface&gt;(&quot;2&quot;); // CustomConcreteClass2
+</code></pre><p>For more details, please read <a href="constructor.html">constructor</a> and <a href="parameter.html">parameter</a></p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/docfx_project/tutorial/injection/container.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

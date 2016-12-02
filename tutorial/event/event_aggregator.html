@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Event Aggregator </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Event Aggregator ">
+    <meta name="generator" content="docfx 2.8.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="event-aggregator">Event Aggregator</h1>
+              
+<h2 id="introduction">Introduction</h2>
+<p>Event aggregator is used for event boardcasting and decoupling of publishers and subscribers so they do not need to know each other. 
+Consider observer pattern, subscribers need to know who they are subscribing to. For example, if <em>A</em> wants to observe changes of <em>B</em>, <em>A</em> must know <em>B</em>. 
+This leads to some problems. Increasing number of observers and observees scales up complexity quickly.</p>
+<p>Another problem is subscribers do not know who to observe. For example, <em>Police</em> wants to get notice when <em>Citizen</em> reports <em>Crime</em>. 
+However, it is impossible for every <em>Police</em> to oberve every <em>Citizen</em> and wait for them to reports <em>Crime</em> because if there is a new <em>Citizen</em> every <em>Police</em> have to observe it. 
+This can be solve by letting <em>Citizen</em> reports to <em>Police Station</em> intead and <em>Police</em> only need to observe <em>Police Station</em>. <em>Police Station</em> is event aggregator.</p>
+<p>Event aggregator centralizes the event publishing. Publishers and subscribers never know each other. Thus, even one of them changes, it will not affect the other one.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>After understanding the reasons to use event aggregator, let&#39;s get started. </p>
+<p>To use event aggregator, add <code>ISubscriber&lt;T&gt;</code> to the subscriber class where <code>T</code> is the event type you want to observe. You have to implement <code>ISubscriber&lt;T&gt;.Receive</code> to handle the event you received. It is recommend to implement it <strong>explicitly</strong> to avoid name conflict and calling it directly.</p>
+<blockquote><p><code>ISubscriber&lt;T&gt;</code> receives all events of type T and its super class.</p>
+</blockquote>
+<pre><code class="lang-csharp">public class CustomSubscriber : ISubscriber&lt;int&gt;
+{
+    void ISubscriber&lt;int&gt;.Receive(int message)
+    {
+        Console.WriteLine(&quot;I received &quot; + message);
+    }
+}
+</code></pre><h3 id="initialization">Initialization</h3>
+<p>Then, you have to create a <code>IEventAggregator</code>. You can create it several ways.
+If you are using <code>IContainer</code>, please refer to <a href="#injection">injection</a>.</p>
+<pre><code class="lang-csharp">// Recommend
+var eventAggregator = EventAggregators.Default();
+// Not recommend
+var eventAggregator = new EventAggregator(new WeakEventHandlerFactory());
+</code></pre><h3 id="subscribe">Subscribe</h3>
+<p>Add your <code>ISubscriber&lt;T&gt;</code> to <code>IEventAggregator</code>.</p>
+<pre><code class="lang-csharp">var subscriber = new CustomSubscriber();
+eventAggregator.Subscribe(subscriber);
+</code></pre><h3 id="publish">Publish</h3>
+<p>After that whenever the <code>eventAggregator</code> is called by <code>IEventAggregator.Publish</code>, <code>subscriber</code> will receive the event. To publish a event,</p>
+<pre><code class="lang-csharp">eventAggregator.Publish(3);
+</code></pre><h3 id="unsubscribe">Unsubscribe</h3>
+<p>You can also unsubscribe when you do not want to receive any events anymore.</p>
+<pre><code class="lang-csharp">eventAggregator.Unsubscribe(subscriber);
+</code></pre><h2 id="advanced">Advanced</h2>
+<h3 id="customization">Customization</h3>
+<p>Customizing <code>EventAggregator</code> requires <code>IEventHandlerFactory</code> and <code>IEventHandler</code>. By default, it uses <code>WeakEventHandlerFactory</code> and <code>WeakEventHandler</code> respectively. You can also implement your <code>IEventAggregator</code> instead.</p>
+<pre><code class="lang-csharp">var eventAggregator = EventAggregators.Default(new CustomEventHandlerFactory());
+</code></pre><p><code>WeakEventHandler</code> has the advantage of use weak reference and will not prevent gadget collection from collection the object. <code>EventAggregator</code> also clean up lost references automatically.</p>
+<h3 id="injection">Injection</h3>
+<p>This is for people who use <code>IContainer</code> only. For more information, please refer to <a href="../injection/container.html">container</a>.</p>
+<p>First, you have to register the necessary types. If you uses default container, you can skip this step.</p>
+<pre><code class="lang-csharp">container.RegisterType&lt;IEventAggregator, EventAggregator&gt;()
+        .RegisterType&lt;IEventHandlerFactory, WeakEventHandlerFactory&gt;();
+</code></pre><p>or you can choose to use with factory method.</p>
+<pre><code class="lang-csharp">var factoryMethod = MethodUtils.GetMethodInfo(() =&gt; EventAggregators.Default(null));
+container.RegisterType&lt;IEventAggregator&gt;(Constructors.StaticFactory(factoryMethod));
+</code></pre><p>Then, you initialize a new instance.</p>
+<pre><code class="lang-csharp">container.Resolve&lt;IEventAggregator&gt;();
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/docfx_project/tutorial/event/event_aggregator.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

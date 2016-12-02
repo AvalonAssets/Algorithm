@@ -1,0 +1,1256 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NullableDictionary&lt;TKey, TValue&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NullableDictionary&lt;TKey, TValue&gt;
+   ">
+    <meta name="generator" content="docfx 2.8.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="AvalonAssets_DataStructure_NullableDictionary_2" data-uid="AvalonAssets.DataStructure.NullableDictionary`2">Class NullableDictionary&lt;TKey, TValue&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>Dictionary that accept null as key.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">NullableDictionary&lt;TKey, TValue&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:AvalonAssets.DataStructure</h6>
+              <h6><strong>Assembly</strong>:AvalonAssets.dll</h6>
+              <h5 id="AvalonAssets_DataStructure_NullableDictionary_2_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class NullableDictionary&lt;TKey, TValue&gt; : IDictionary&lt;TKey, TValue&gt;, ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;, IDictionary, ICollection, IEnumerable where TKey : class</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>TKey</em></td>
+                    <td>Key type.</td>
+                  </tr>
+                  <tr>
+                    <td><em>TValue</em></td>
+                    <td>Value type.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2__ctor.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L19">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2__ctor_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.#ctor*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2__ctor" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.#ctor">NullableDictionary()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public NullableDictionary()</code></pre>
+              </div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2__ctor_System_Collections_Generic_IEqualityComparer__0__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.%23ctor(System.Collections.Generic.IEqualityComparer%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L24">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2__ctor_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.#ctor*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2__ctor_System_Collections_Generic_IEqualityComparer__0__" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">NullableDictionary(IEqualityComparer&lt;TKey&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public NullableDictionary(IEqualityComparer&lt;TKey&gt; comparer)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEqualityComparer</span>&lt;TKey&gt;</td>
+                    <td><em>comparer</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Count.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L235">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Count_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Count*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Count" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Count">Count</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Count</span></div>
+                  <div><span class="xref">System.Collections.ICollection.Count</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_IsReadOnly.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L240">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_IsReadOnly_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.IsReadOnly*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_IsReadOnly" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.IsReadOnly">IsReadOnly</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly</span></div>
+                  <div><span class="xref">System.Collections.IDictionary.IsReadOnly</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Item__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Item(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L146">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Item_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Item*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Item__0_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Item(`0)">Item[TKey]</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TValue this[TKey key] { get; set; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TKey</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Item[TKey]</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Keys.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L161">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Keys_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Keys*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Keys" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Keys">Keys</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ICollection&lt;TKey&gt; Keys { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TKey&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Keys</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Values.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L170">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Values_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Values*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Values" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Values">Values</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ICollection&lt;TValue&gt; Values { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;TValue&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Values</span></div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Add__0__1_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Add(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L109">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Add_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Add*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Add__0__1_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Add(`0,`1)">Add(TKey, TValue)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(TKey key, TValue value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TKey</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Add(TKey, TValue)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Clear.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L206">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Clear_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Clear*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Clear" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Clear">Clear()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Clear()</span></div>
+                  <div><span class="xref">System.Collections.IDictionary.Clear()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_ContainsKey__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.ContainsKey(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L104">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_ContainsKey_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.ContainsKey*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_ContainsKey__0_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.ContainsKey(`0)">ContainsKey(TKey)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ContainsKey(TKey key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TKey</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.ContainsKey(TKey)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_GetEnumerator.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L179">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_GetEnumerator_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.GetEnumerator*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_GetEnumerator" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;TKey, TValue&gt;&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Remove__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Remove(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L122">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Remove_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Remove*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Remove__0_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Remove(`0)">Remove(TKey)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Remove(TKey key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TKey</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.Remove(TKey)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_Remove_System_Object_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.Remove(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L55">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_Remove_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Remove*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_Remove_System_Object_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.Remove(System.Object)">Remove(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Remove(object key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Remove(System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_TryGetValue__0__1__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.TryGetValue(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L132">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_TryGetValue_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.TryGetValue*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_TryGetValue__0__1__" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.TryGetValue(`0,`1@)">TryGetValue(TKey, out TValue)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool TryGetValue(TKey key, out TValue value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TKey</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;.TryGetValue(TKey, TValue)</span></div>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Add_System_Collections_Generic_KeyValuePair__0__1__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23Generic%23ICollection%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23Add(System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L192">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Add_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Add_System_Collections_Generic_KeyValuePair__0__1__" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Add(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Add(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Add(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Add(T)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Contains_System_Collections_Generic_KeyValuePair__0__1__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23Generic%23ICollection%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23Contains(System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L213">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Contains_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Contains_System_Collections_Generic_KeyValuePair__0__1__" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Contains(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Contains(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Contains(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Contains(T)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23Generic%23ICollection%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23CopyTo(System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L219">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___CopyTo_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___CopyTo_System_Collections_Generic_KeyValuePair__0__1____System_Int32_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.CopyTo(KeyValuePair&lt;TKey, TValue&gt;[], Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.CopyTo(KeyValuePair&lt;TKey, TValue&gt;[] array, int arrayIndex)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;[]</td>
+                    <td><em>array</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>arrayIndex</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.CopyTo(T[], System.Int32)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_System_Collections_Generic_KeyValuePair__0__1__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23Generic%23ICollection%7BSystem%23Collections%23Generic%23KeyValuePair%7BTKey%2CTValue%7D%7D%23Remove(System.Collections.Generic.KeyValuePair%7B%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L227">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_Generic_ICollection_System_Collections_Generic_KeyValuePair_TKey_TValue___Remove_System_Collections_Generic_KeyValuePair__0__1__" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{TKey,TValue}}#Remove(System.Collections.Generic.KeyValuePair{`0,`1})">ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Remove(KeyValuePair&lt;TKey, TValue&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool ICollection&lt;KeyValuePair&lt;TKey, TValue&gt;&gt;.Remove(KeyValuePair&lt;TKey, TValue&gt; item)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;TKey, TValue&gt;</td>
+                    <td><em>item</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Remove(T)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_CopyTo_System_Array_System_Int32_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23ICollection%23CopyTo(System.Array%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L81">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_CopyTo_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#CopyTo*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_CopyTo_System_Array_System_Int32_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">ICollection.CopyTo(Array, Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void ICollection.CopyTo(Array array, int index)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Array</span></td>
+                    <td><em>array</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>index</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.CopyTo(System.Array, System.Int32)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_IsSynchronized.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23ICollection%23IsSynchronized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L94">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_IsSynchronized_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#IsSynchronized*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_IsSynchronized" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#IsSynchronized">ICollection.IsSynchronized</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool ICollection.IsSynchronized { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.IsSynchronized</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_SyncRoot.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23ICollection%23SyncRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L89">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_SyncRoot_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#SyncRoot*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_ICollection_SyncRoot" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#ICollection#SyncRoot">ICollection.SyncRoot</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">object ICollection.SyncRoot { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.ICollection.SyncRoot</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Add_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23Add(System.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L71">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Add_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Add*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Add_System_Object_System_Object_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)">IDictionary.Add(Object, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void IDictionary.Add(object key, object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Add(System.Object, System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Contains_System_Object_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23Contains(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L66">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Contains_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Contains*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Contains_System_Object_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Contains(System.Object)">IDictionary.Contains(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IDictionary.Contains(object key)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Contains(System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_GetEnumerator.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L76">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_GetEnumerator_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#GetEnumerator*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_GetEnumerator" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#GetEnumerator">IDictionary.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IDictionaryEnumerator IDictionary.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IDictionaryEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.GetEnumerator()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_IsFixedSize.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23IsFixedSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L99">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_IsFixedSize_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#IsFixedSize*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_IsFixedSize" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#IsFixedSize">IDictionary.IsFixedSize</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IDictionary.IsFixedSize { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.IsFixedSize</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Item_System_Object_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23Item(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L60">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Item_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Item*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Item_System_Object_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Item(System.Object)">IDictionary.Item[Object]</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">object IDictionary.this[object key] { get; set; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Item[System.Object]</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Keys.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L42">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Keys_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Keys*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Keys" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Keys">IDictionary.Keys</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">ICollection IDictionary.Keys { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.ICollection</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Keys</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Values.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IDictionary%23Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L29">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Values_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Values*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IDictionary_Values" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IDictionary#Values">IDictionary.Values</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">ICollection IDictionary.Values { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.ICollection</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IDictionary.Values</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L187">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+              <h4 id="AvalonAssets_DataStructure_NullableDictionary_2_System_Collections_IEnumerable_GetEnumerator" data-uid="AvalonAssets.DataStructure.NullableDictionary`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="AvalonAssets.Utility.EnumUtils.html#AvalonAssets_Utility_EnumUtils_Shift__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumUtils.Shift&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_NullableDictionary_2.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.NullableDictionary%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/NullableDictionary.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

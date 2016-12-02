@@ -1,0 +1,1006 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HexGrid&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HexGrid&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.8.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="AvalonAssets_DataStructure_Grid_HexGrid_1" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1">Class HexGrid&lt;T&gt;
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">HexGrid&lt;T&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:AvalonAssets.DataStructure.Grid</h6>
+              <h6><strong>Assembly</strong>:AvalonAssets.dll</h6>
+              <h5 id="AvalonAssets_DataStructure_Grid_HexGrid_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class HexGrid&lt;T&gt; : IGraph&lt;IHexCoordinate&gt;, IEnumerable&lt;KeyValuePair&lt;IHexCoordinate, T&gt;&gt;, IEnumerable</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1__ctor.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L13">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1__ctor_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.#ctor*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1__ctor" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.#ctor">HexGrid()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public HexGrid()</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_Count.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L24">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_Count_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Count*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_Count" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Count">Count</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_Item_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.Item(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L18">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_Item_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Item*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_Item_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Item(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">Item[IHexCoordinate]</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T this[IHexCoordinate coordinate] { get; set; }</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>coordinate</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_Keys.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.Keys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L29">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_Keys_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Keys*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_Keys" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Keys">Keys</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Dictionary&lt;IHexCoordinate, T&gt;.KeyCollection Keys { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.Dictionary.KeyCollection</span>&lt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_Values.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.Values%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L34">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_Values_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Values*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_Values" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Values">Values</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Dictionary&lt;IHexCoordinate, T&gt;.ValueCollection Values { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.Dictionary.ValueCollection</span>&lt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_Add_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.Add(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L39">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_Add_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Add*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_Add_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__0_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.Add(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate,`0)">Add(IHexCoordinate, T)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(IHexCoordinate coordinate, T value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>coordinate</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsKey_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.ContainsKey(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L49">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsKey_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.ContainsKey*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsKey_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.ContainsKey(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">ContainsKey(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ContainsKey(IHexCoordinate coordinate)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>coordinate</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsValue__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.ContainsValue(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L54">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsValue_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.ContainsValue*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_ContainsValue__0_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.ContainsValue(`0)">ContainsValue(T)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool ContainsValue(T value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_GetEnumerator.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L129">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_GetEnumerator_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.GetEnumerator*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_GetEnumerator" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.GetEnumerator">GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IEnumerator&lt;KeyValuePair&lt;IHexCoordinate, T&gt;&gt; GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>, T&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_TryGetValue_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__0__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.TryGetValue(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate%2C%600%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L44">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_TryGetValue_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.TryGetValue*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_TryGetValue_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__0__" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.TryGetValue(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate,`0@)">TryGetValue(IHexCoordinate, out T)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool TryGetValue(IHexCoordinate coordinate, out T value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>coordinate</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><em>value</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="eii">Explicit Interface Implementations
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__AllowSelfLoops.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23AllowSelfLoops%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L61">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__AllowSelfLoops_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#AllowSelfLoops*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__AllowSelfLoops" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#AllowSelfLoops">IGraph&lt;IHexCoordinate&gt;.AllowSelfLoops</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IGraph&lt;IHexCoordinate&gt;.AllowSelfLoops { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_AllowSelfLoops">IGraph&lt;TNode&gt;.AllowSelfLoops</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Degree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Degree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L100">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Degree_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Degree*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Degree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Degree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.Degree(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IGraph&lt;IHexCoordinate&gt;.Degree(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Degree__0_">IGraph&lt;TNode&gt;.Degree(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Edges.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Edges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L66">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Edges_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Edges*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Edges" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Edges">IGraph&lt;IHexCoordinate&gt;.Edges</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerable&lt;EndPointPair&lt;IHexCoordinate&gt;&gt; IGraph&lt;IHexCoordinate&gt;.Edges { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AvalonAssets.DataStructure.Graph.EndPointPair-1.html">EndPointPair</a>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Edges">IGraph&lt;TNode&gt;.Edges</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__InDegree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23InDegree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L105">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__InDegree_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#InDegree*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__InDegree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#InDegree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.InDegree(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IGraph&lt;IHexCoordinate&gt;.InDegree(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_InDegree__0_">IGraph&lt;TNode&gt;.InDegree(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__IsDirected.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23IsDirected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L85">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__IsDirected_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#IsDirected*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__IsDirected" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#IsDirected">IGraph&lt;IHexCoordinate&gt;.IsDirected</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">bool IGraph&lt;IHexCoordinate&gt;.IsDirected { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_IsDirected">IGraph&lt;TNode&gt;.IsDirected</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Neighbors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Neighbors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L95">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Neighbors_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Neighbors*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Neighbors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Neighbors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.Neighbors(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerable&lt;IHexCoordinate&gt; IGraph&lt;IHexCoordinate&gt;.Neighbors(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Neighbors__0_">IGraph&lt;TNode&gt;.Neighbors(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Nodes.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Nodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L90">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Nodes_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Nodes*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Nodes" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Nodes">IGraph&lt;IHexCoordinate&gt;.Nodes</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerable&lt;IHexCoordinate&gt; IGraph&lt;IHexCoordinate&gt;.Nodes { get; }</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Nodes">IGraph&lt;TNode&gt;.Nodes</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__OutDegree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23OutDegree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L110">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__OutDegree_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#OutDegree*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__OutDegree_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#OutDegree(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.OutDegree(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">int IGraph&lt;IHexCoordinate&gt;.OutDegree(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_OutDegree__0_">IGraph&lt;TNode&gt;.OutDegree(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Predecessors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Predecessors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L115">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Predecessors_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Predecessors*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Predecessors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Predecessors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.Predecessors(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerable&lt;IHexCoordinate&gt; IGraph&lt;IHexCoordinate&gt;.Predecessors(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Predecessors__0_">IGraph&lt;TNode&gt;.Predecessors(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Successors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.AvalonAssets%23DataStructure%23Graph%23IGraph%7BAvalonAssets%23Algorithm%23Grid%23Hex%23IHexCoordinate%7D%23Successors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L120">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Successors_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Successors*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_AvalonAssets_DataStructure_Graph_IGraph_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate__Successors_AvalonAssets_Algorithm_Grid_Hex_IHexCoordinate_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.AvalonAssets#DataStructure#Graph#IGraph{AvalonAssets#Algorithm#Grid#Hex#IHexCoordinate}#Successors(AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate)">IGraph&lt;IHexCoordinate&gt;.Successors(IHexCoordinate)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerable&lt;IHexCoordinate&gt; IGraph&lt;IHexCoordinate&gt;.Successors(IHexCoordinate node)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a></td>
+                    <td><em>node</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AvalonAssets.Algorithm.Grid.Hex.IHexCoordinate.html">IHexCoordinate</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.DataStructure.Graph.IGraph-1.html#AvalonAssets_DataStructure_Graph_IGraph_1_Successors__0_">IGraph&lt;TNode&gt;.Successors(TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L134">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Grid_HexGrid_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+              <h4 id="AvalonAssets_DataStructure_Grid_HexGrid_1_System_Collections_IEnumerable_GetEnumerator" data-uid="AvalonAssets.DataStructure.Grid.HexGrid`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.IEnumerator</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="AvalonAssets.Utility.EnumUtils.html#AvalonAssets_Utility_EnumUtils_Shift__1_System_Collections_Generic_IEnumerable___0__System_Int32_">EnumUtils.Shift&lt;T&gt;(IEnumerable&lt;T&gt;, Int32)</a>
+              </div>
+              <div>
+                  <a class="xref" href="AvalonAssets.Algorithm.Graph.PathFinding.html#AvalonAssets_Algorithm_Graph_PathFinding_BreadthFirstSearch__1_AvalonAssets_DataStructure_Graph_IGraph___0____0___0_">PathFinding.BreadthFirstSearch&lt;T&gt;(IGraph&lt;T&gt;, T, T)</a>
+              </div>
+              <div>
+                  <a class="xref" href="AvalonAssets.Algorithm.Graph.PathFinding.html#AvalonAssets_Algorithm_Graph_PathFinding_HeuristicSearch__1_AvalonAssets_DataStructure_Graph_IGraph___0____0___0_AvalonAssets_Algorithm_Graph_PathFinding_Heuristic___0__">PathFinding.HeuristicSearch&lt;T&gt;(IGraph&lt;T&gt;, T, T, PathFinding.Heuristic&lt;T&gt;)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Grid_HexGrid_1.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Grid.HexGrid%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Grid/HexGrid.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

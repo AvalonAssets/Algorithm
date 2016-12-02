@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ArrayObjectPool&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ArrayObjectPool&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.8.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1">Class ArrayObjectPool&lt;T&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>A array implementation of <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectPool-1.html">IObjectPool&lt;T&gt;</a> implementation with predefined pool size limit.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool-1.html">AbstractObjectPool</a>&lt;T&gt;</div>
+                  <div class="level2"><span class="xref">ArrayObjectPool&lt;T&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool-1.html#AvalonAssets_DataStructure_Cache_Pool_AbstractObjectPool_1_SetExceptionHandleOption_AvalonAssets_DataStructure_Cache_Pool_PoolExceptionHandleOption_">AbstractObjectPool&lt;T&gt;.SetExceptionHandleOption(PoolExceptionHandleOption)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool-1.html#AvalonAssets_DataStructure_Cache_Pool_AbstractObjectPool_1_CheckExceptionRethrow_System_Exception_">AbstractObjectPool&lt;T&gt;.CheckExceptionRethrow(Exception)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:AvalonAssets.DataStructure.Cache.Pool</h6>
+              <h6><strong>Assembly</strong>:AvalonAssets.dll</h6>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class ArrayObjectPool&lt;T&gt; : AbstractObjectPool&lt;T&gt;, IObjectPool&lt;T&gt; where T : class</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td>The type of IObjectPool held in this pool</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>
+    Given a <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html">IObjectFactory&lt;T&gt;</a>, this class will maintain a simple pool of instances.
+    A finite number of idle instances is enforced, but when the pool is empty, new instances are created to support
+    the new load.
+</p>
+<p>
+    Hence this class places no limit on the number of active instances created by the pool.
+    This pool is thread-safe.
+</p>
+</div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0__.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.%23ctor(AvalonAssets.DataStructure.Cache.Pool.IObjectFactory%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L36">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.#ctor*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0__" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.#ctor(AvalonAssets.DataStructure.Cache.Pool.IObjectFactory{`0})">ArrayObjectPool(IObjectFactory&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Create a new <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool-1.html">ArrayObjectPool&lt;T&gt;</a> using the specified factory to create new instances.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ArrayObjectPool(IObjectFactory&lt;T&gt; factory)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html">IObjectFactory</a>&lt;T&gt;</td>
+                    <td><em>factory</em></td>
+                    <td><p>The <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html">IObjectFactory&lt;T&gt;</a> used to populate the pool.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>It limits the maximum number of idle instances to default value.</p>
+</div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0__System_Int32_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.%23ctor(AvalonAssets.DataStructure.Cache.Pool.IObjectFactory%7B%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L48">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.#ctor*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0__System_Int32_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.#ctor(AvalonAssets.DataStructure.Cache.Pool.IObjectFactory{`0},System.Int32)">ArrayObjectPool(IObjectFactory&lt;T&gt;, Int32)</h4>
+              <div class="markdown level1 summary"><p>Create a new <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool-1.html">ArrayObjectPool&lt;T&gt;</a> using the specified factory to create new instances.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ArrayObjectPool(IObjectFactory&lt;T&gt; factory, int poolSize)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html">IObjectFactory</a>&lt;T&gt;</td>
+                    <td><em>factory</em></td>
+                    <td><p>The <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html">IObjectFactory&lt;T&gt;</a> used to populate the pool.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>poolSize</em></td>
+                    <td><p>Maximum size of the pool.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1__ctor_AvalonAssets_DataStructure_Cache_Pool_IObjectFactory__0__System_Int32__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>It limits the maximum number of idle instances to <em>poolSize</em>.</p>
+</div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Allocate.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.Allocate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L84">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Allocate_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Allocate*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Allocate" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Allocate">Allocate()</h4>
+              <div class="markdown level1 summary"><p>Allocate an object from the pool.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override T Allocate()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><p>An instance from the pool.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool&lt;T&gt;.Allocate()</span></div>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Allocate_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+    If there are idle instances available in the pool, the first element is activated, and
+    return to the client.
+    If there are no idle instances available, <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Make">Make()</a> is invoked to create a
+    new instance.
+</p>
+<p>
+    All instances are <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Activate__0_">Activate(T)</a> before being returned to the client. If the
+    instances fail the activation, it will be destoryed.
+</p>
+<p>
+    Exceptions throws by <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Activate__0_">Activate(T)</a> or
+<a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Destory__0_">Destory(T)</a> instances are silently swallowed.
+</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Exception</span></td>
+                    <td><p>When <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Make">Make()</a> or
+<a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Make">Make()</a> throws an exception.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Clear.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L197">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Clear_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Clear*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Clear" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Clear">Clear()</h4>
+              <div class="markdown level1 summary"><p>Clears any objects sitting idle in the pool, releasing any associated resources.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void Clear()</code></pre>
+              </div>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool&lt;T&gt;.Clear()</span></div>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Clear_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Idle objects cleared must be <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Destory__0_">Destory(T)</a>. If new objects is cached during
+clearing, it may not be clear.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Exception</span></td>
+                    <td><p>When <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Destory__0_">Destory(T)</a> throws an exception.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Free__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.Free(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L138">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Free_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Free*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Free__0_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.Free(`0)">Free(T)</h4>
+              <div class="markdown level1 summary"><p>Frees an instance to the pool, put it in the pool after successful deactivation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void Free(T obj)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><em>obj</em></td>
+                    <td><p>A <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool-1.html#AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Allocate">Allocate()</a> instance to be disposed.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool&lt;T&gt;.Free(T)</span></div>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_Free__0__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+    The returning instance is destroyed if deactivation throws an exception, or the stack is already full.
+</p>
+<p>
+    Exceptions throws by <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Deactivate__0_">Deactivate(T)</a> or
+<a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Destory__0_">Destory(T)</a> instances are silently swallowed.
+</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Exception</span></td>
+                    <td><p>When <a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Deactivate__0_">Deactivate(T)</a> or
+<a class="xref" href="AvalonAssets.DataStructure.Cache.Pool.IObjectFactory-1.html#AvalonAssets_DataStructure_Cache_Pool_IObjectFactory_1_Destory__0_">Destory(T)</a> throws an exception.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_GetCacheSize.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601.GetCacheSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L182">View Source</a>
+              </span>
+              <a id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_GetCacheSize_" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.GetCacheSize*"></a>
+              <h4 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_GetCacheSize" data-uid="AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool`1.GetCacheSize">GetCacheSize()</h4>
+              <div class="markdown level1 summary"><p>Return the number of instances currently in this pool.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetCacheSize()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>The number of instances currently in this pool.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">AvalonAssets.DataStructure.Cache.Pool.AbstractObjectPool&lt;T&gt;.GetCacheSize()</span></div>
+              <h5 id="AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1_GetCacheSize_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This may be considered an approximation of the number of objects that can be borrowed without creating any new
+instances.</p>
+</div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_DataStructure_Cache_Pool_ArrayObjectPool_1.md&amp;value=---%0Auid%3A%20AvalonAssets.DataStructure.Cache.Pool.ArrayObjectPool%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/AvalonAssets/DataStructure/Cache/Pool/ArrayObjectPool.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
