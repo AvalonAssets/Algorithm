@@ -131,15 +131,15 @@ namespace AvalonAssets.Algorithm.Grid.Hex
 
         /// <summary>
         ///     <para>
-        ///         Converts <paramref name="target" /> to a relative <see cref="IRingCoordinate" /> with respect to
+        ///         Converts <paramref name="target" /> to a relative <see cref="IRingHexCoordinate" /> with respect to
         ///         <paramref name="coordinate" />.
         ///     </para>
         /// </summary>
         /// <param name="coordinate">Current <see cref="IHexCoordinate" />.</param>
         /// <param name="target"><see cref="IHexCoordinate" /> to be converted.</param>
-        /// <returns><see cref="IRingCoordinate" /> with respect to <paramref name="coordinate" />.</returns>
+        /// <returns><see cref="IRingHexCoordinate" /> with respect to <paramref name="coordinate" />.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="coordinate" /> or <paramref name="target" /> is null.</exception>
-        public static IRingCoordinate ToRing(this IHexCoordinate coordinate, IHexCoordinate target)
+        public static IRingHexCoordinate ToRing(this IHexCoordinate coordinate, IHexCoordinate target)
         {
             if (coordinate == null)
                 throw new ArgumentNullException("coordinate");
