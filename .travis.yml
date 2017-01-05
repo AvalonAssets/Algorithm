@@ -1,12 +1,12 @@
 language: csharp
-solution: AvalonAssets.sln
+solution: Vola.sln
 notifications:
   email:
     on_success: never
     on_failure: always
     on_pull_requests: false
 install:
-  - nuget restore AvalonAssets.sln
+  - nuget restore Vola.sln
 script:
-  - xbuild /p:Configuration=Release AvalonAssets.sln
+  - xbuild /p:Configuration=Release Vola.sln
   - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./AvalonAssetsTests/bin/Release/AvalonAssetsTests.dll
