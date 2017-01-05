@@ -41,11 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Heap\BinaryHeap.cs" />
+    <Compile Include="Data\Heap\BinomialHeap.cs" />
+    <Compile Include="Data\Heap\FibonacciHeap.cs" />
+    <Compile Include="Data\Heap\Heaps.cs" />
+    <Compile Include="Data\Heap\IHeap.cs" />
+    <Compile Include="Data\Heap\IHeapNode.cs" />
+    <Compile Include="Data\Queue\IPriority.cs" />
+    <Compile Include="Data\Queue\PriorityComparer.cs" />
+    <Compile Include="Data\Queue\PriorityWrapper.cs" />
+    <Compile Include="Data\Queue\PriorityQueue.cs" />
     <Compile Include="Lazy.cs" />
     <Compile Include="Log\ConsoleLogger.cs" />
-    <Compile Include="Log\DummyLogger.cs" />
     <Compile Include="Log\ILogger.cs" />
-    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Log\Loggers.cs" />
     <Compile Include="Log\LoggerExtensions.cs" />
     <Compile Include="Log\LogLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
