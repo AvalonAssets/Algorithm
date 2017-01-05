@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4402EA7-6F34-439A-91A7-9CE62C6980A2}</ProjectGuid>
+    <ProjectGuid>{673FAE20-3FFA-4C24-884A-AE61E5B4B9F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AvalonAssetsTests</RootNamespace>
-    <AssemblyName>AvalonAssetsTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>AvalonAssets.CoreTests</RootNamespace>
+    <AssemblyName>AvalonAssets.CoreTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -26,7 +26,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,14 +34,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <Private>False</Private>
-    </Reference>
     <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.3.5.0\lib\net35\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -56,34 +51,18 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Algorithm\Event\EventAggregatorTests.cs" />
-    <Compile Include="Algorithm\Injection\ContainerTests.cs" />
-    <Compile Include="Algorithm\Graph\PathFindingTests.cs" />
-    <Compile Include="DataStructure\Geometry\AngleIntervalTests.cs" />
-    <Compile Include="DataStructure\Graph\EndPointPairTests.cs" />
-    <Compile Include="DataStructure\Graph\GraphConnectionTests.cs" />
-    <Compile Include="DataStructure\Graph\GraphTests.cs" />
-    <Compile Include="DataStructure\Grid\HexGridTests.cs" />
-    <Compile Include="DataStructure\Heap\BinaryHeapTests.cs" />
-    <Compile Include="DataStructure\Heap\BinomialHeapTests.cs" />
-    <Compile Include="DataStructure\Heap\FibonacciHeapTests.cs" />
-    <Compile Include="DataStructure\Heap\HeapTest.cs" />
-    <Compile Include="Algorithm\Grid\Hex\HexCoordinateTest.cs" />
-    <Compile Include="DataStructure\NullableDictionaryTests.cs" />
+    <Compile Include="LazyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\MethodUtilsTests.cs" />
-    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AvalonAssets\AvalonAssets.csproj">
-      <Project>{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}</Project>
-      <Name>AvalonAssets</Name>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}</Project>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
