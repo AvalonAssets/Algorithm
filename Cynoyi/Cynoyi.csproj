@@ -11,7 +11,7 @@
     <AssemblyName>AvalonAssets.Cynoyi</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,12 +47,6 @@
     <Compile Include="ReflectEventHandler.cs" />
     <Compile Include="LambdaEventHandlerFactory.cs" />
     <Compile Include="ReflectEventHandlerFactory.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
-      <Project>{d76bede7-bfad-4ad7-81d8-eccf8ac3ede2}</Project>
-      <Name>Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
