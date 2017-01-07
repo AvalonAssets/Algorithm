@@ -10,7 +10,7 @@ namespace AvalonAssets.Cynoyi
     ///         Implementation of <see cref="IEventHandler" />. Uses weak reference to hold the reference to subscriber.
     ///     </para>
     /// </summary>
-    internal class WeakEventHandler : IEventHandler
+    internal class ReflectEventHandler : IEventHandler
     {
         private readonly Dictionary<Type, MethodInfo> _supportedHandlers;
         private readonly WeakReference _weakReference;
@@ -23,10 +23,10 @@ namespace AvalonAssets.Cynoyi
         /// <param name="subscriber">Object that want to subscribe.</param>
         /// <remarks>
         ///     <para>
-        ///         It is not recommend to use this directly. You should use <see cref="WeakEventHandlerFactory" /> instead.
+        ///         It is not recommend to use this directly. You should use <see cref="ReflectEventHandlerFactory" /> instead.
         ///     </para>
         /// </remarks>
-        public WeakEventHandler(ISubscriber subscriber)
+        public ReflectEventHandler(ISubscriber subscriber)
         {
             _weakReference = new WeakReference(subscriber);
             _supportedHandlers = new Dictionary<Type, MethodInfo>();
@@ -81,16 +81,10 @@ namespace AvalonAssets.Cynoyi
         {
             if (!Alive)
                 return false;
-            foreach (var pair in _supportedHandlers)
-            {
-                // Continue if it is not the type or its sub-type
-                if (!pair.Key.IsAssignableFrom(messageType)) continue;
-                // Returns result ignored.
-                pair.Value.Invoke(_weakReference.Target, new[] {message});
-            }
+            var type = Types.FirstOrDefault(t => t.IsAssignableFrom(messageType));
+            if (type != null)
+                _supportedHandlers[type].Invoke(_weakReference.Target, new[] {message});
             return true;
         }
-
-
     }
 }

@@ -13,7 +13,7 @@
         public IEventAggregator Build()
         {
             if (_eventHandlerFactory == null)
-                _eventHandlerFactory = new WeakEventHandlerFactory();
+                _eventHandlerFactory = new ReflectEventHandlerFactory();
             return new EventAggregator(_eventHandlerFactory);
         }
     }

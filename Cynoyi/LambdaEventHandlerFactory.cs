@@ -5,7 +5,7 @@
     ///         Wraps <see cref="ISubscriber{T}" /> to <see cref="IEventHandler" /> with weak reference.
     ///     </para>
     /// </summary>
-    public class WeakEventHandlerFactory : IEventHandlerFactory
+    public class LambdaEventHandlerFactory : IEventHandlerFactory
     {
         /// <summary>
         ///     <para>
@@ -16,7 +16,7 @@
         /// <returns>New instance of <see cref="IEventHandler" />.</returns>
         public IEventHandler Create(ISubscriber subscriber)
         {
-            return new WeakEventHandler(subscriber);
+            return new LambdaEventHandler(subscriber);
         }
     }
 }
