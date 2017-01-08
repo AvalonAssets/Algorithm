@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractEventHandler.cs" />
     <Compile Include="EventAggregator.cs" />
     <Compile Include="EventAggregatorBuilder.cs" />
     <Compile Include="EventHandlerExtensions.cs" />

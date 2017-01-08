@@ -10,10 +10,9 @@ namespace AvalonAssets.Cynoyi
     ///         Implementation of <see cref="IEventHandler" />. Uses weak reference to hold the reference to subscriber.
     ///     </para>
     /// </summary>
-    internal class ReflectEventHandler : IEventHandler
+    internal class ReflectEventHandler : AbstractEventHandler
     {
         private readonly Dictionary<Type, MethodInfo> _supportedHandlers;
-        private readonly WeakReference _weakReference;
 
         /// <summary>
         ///     <para>
@@ -26,9 +25,8 @@ namespace AvalonAssets.Cynoyi
         ///         It is not recommend to use this directly. You should use <see cref="ReflectEventHandlerFactory" /> instead.
         ///     </para>
         /// </remarks>
-        public ReflectEventHandler(ISubscriber subscriber)
+        public ReflectEventHandler(ISubscriber subscriber) : base(subscriber)
         {
-            _weakReference = new WeakReference(subscriber);
             _supportedHandlers = new Dictionary<Type, MethodInfo>();
             // Gets all the ISubscriber<T> interface
             var interfaces = subscriber.GetType().GetInterfaces()
@@ -43,48 +41,15 @@ namespace AvalonAssets.Cynoyi
 
         /// <summary>
         ///     <para>
-        ///         Checks if the object still available.
-        ///     </para>
-        /// </summary>
-        /// <returns>True if object is not GC.</returns>
-        public bool Alive => _weakReference.Target != null;
-
-        /// <summary>
-        ///     <para>
         ///         Gets All the <see cref="Type" /> that can handle by <see cref="IEventHandler" />.
         ///     </para>
         /// </summary>
         /// <returns>All type the <see cref="IEventHandler" /> that can handle.</returns>
-        public IEnumerable<Type> Types => _supportedHandlers.Keys;
+        public override IEnumerable<Type> Types => _supportedHandlers.Keys;
 
-        /// <summary>
-        ///     <para>
-        ///         Check if <paramref name="instance" /> equals to its reference object.
-        ///     </para>
-        /// </summary>
-        /// <param name="instance">Object.</param>
-        /// <returns>True if this handler is wraping <paramref name="instance" />.</returns>
-        public bool Matches(object instance)
+        protected override void HandleMessage(Type handlerType, object target, object message)
         {
-            return _weakReference.Target == instance;
-        }
-
-        /// <summary>
-        ///     <para>
-        ///         Handles <paramref name="message" /> of type <paramref name="messageType" />.
-        ///     </para>
-        /// </summary>
-        /// <param name="messageType">Message type.</param>
-        /// <param name="message">Message to be handle.</param>
-        /// <returns>True if the object is alive.</returns>
-        public bool Handle(Type messageType, object message)
-        {
-            if (!Alive)
-                return false;
-            var type = Types.FirstOrDefault(t => t.IsAssignableFrom(messageType));
-            if (type != null)
-                _supportedHandlers[type].Invoke(_weakReference.Target, new[] {message});
-            return true;
+            _supportedHandlers[handlerType].Invoke(target, new[] {message});
         }
     }
 }
