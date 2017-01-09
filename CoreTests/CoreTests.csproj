@@ -51,6 +51,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Heap\BinaryHeapTests.cs" />
+    <Compile Include="Heap\BinomialHeapTests.cs" />
+    <Compile Include="Heap\FibonacciHeapTests.cs" />
+    <Compile Include="Heap\HeapTest.cs" />
     <Compile Include="LazyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

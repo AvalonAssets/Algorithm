@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{940594FE-02CD-4D66-A011-4A4A72285D9A}</ProjectGuid>
+    <ProjectGuid>{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AvalonAssets.CynoyiTests</RootNamespace>
-    <AssemblyName>AvalonAssets.CynoyiTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>AvalonAssets.RojyTests</RootNamespace>
+    <AssemblyName>AvalonAssets.RojyTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,17 +51,24 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="EventAggregatorTests.cs" />
-    <Compile Include="Heap\BinaryHeapTests.cs" />
-    <Compile Include="Heap\BinomialHeapTests.cs" />
-    <Compile Include="Heap\FibonacciHeapTests.cs" />
-    <Compile Include="Heap\HeapTest.cs" />
+    <Compile Include="Graph\EndPointPairTests.cs" />
+    <Compile Include="Graph\GraphConnectionTests.cs" />
+    <Compile Include="Graph\GraphTests.cs" />
+    <Compile Include="Graph\PathFindingTests.cs" />
+    <Compile Include="Grid\AngleIntervalTests.cs" />
+    <Compile Include="Grid\Hex\HexCoordinateTest.cs" />
+    <Compile Include="Grid\Hex\HexGridTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cynoyi\Cynoyi.csproj">
-      <Project>{CD1B8370-1134-46F5-B8E6-B3CFA2B5C65A}</Project>
-      <Name>Cynoyi</Name>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rojy\Rojy.csproj">
+      <Project>{AC80CEF8-68D6-458E-96BC-DB459913771E}</Project>
+      <Name>Rojy</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

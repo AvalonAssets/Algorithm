@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonAssets", "AvalonAssets\AvalonAssets.csproj", "{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonAssetsTests", "AvalonAssetsTests\AvalonAssetsTests.csproj", "{B4402EA7-6F34-439A-91A7-9CE62C6980A2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTests", "CoreTests\CoreTests.csproj", "{673FAE20-3FFA-4C24-884A-AE61E5B4B9F4}"
@@ -15,20 +11,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cynoyi", "Cynoyi\Cynoyi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CynoyiTests", "CynoyiTests\CynoyiTests.csproj", "{940594FE-02CD-4D66-A011-4A4A72285D9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rojy", "Rojy\Rojy.csproj", "{AC80CEF8-68D6-458E-96BC-DB459913771E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RojyTests", "RojyTests\RojyTests.csproj", "{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fyjelu", "Fyjelu\Fyjelu.csproj", "{FD293997-F02D-467A-BD68-52EEB0C659B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{326D2846-6BDB-41A1-B19F-30FB8E59F3C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4402EA7-6F34-439A-91A7-9CE62C6980A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4402EA7-6F34-439A-91A7-9CE62C6980A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4402EA7-6F34-439A-91A7-9CE62C6980A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4402EA7-6F34-439A-91A7-9CE62C6980A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D76BEDE7-BFAD-4AD7-81D8-ECCF8AC3EDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +39,18 @@ Global
 		{940594FE-02CD-4D66-A011-4A4A72285D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940594FE-02CD-4D66-A011-4A4A72285D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{940594FE-02CD-4D66-A011-4A4A72285D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC80CEF8-68D6-458E-96BC-DB459913771E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC80CEF8-68D6-458E-96BC-DB459913771E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC80CEF8-68D6-458E-96BC-DB459913771E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC80CEF8-68D6-458E-96BC-DB459913771E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD21436-4174-42ED-B051-AEF6E4AD4A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD293997-F02D-467A-BD68-52EEB0C659B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD293997-F02D-467A-BD68-52EEB0C659B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD293997-F02D-467A-BD68-52EEB0C659B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD293997-F02D-467A-BD68-52EEB0C659B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
