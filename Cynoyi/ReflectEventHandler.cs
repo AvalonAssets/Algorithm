@@ -6,25 +6,16 @@ using System.Reflection;
 namespace AvalonAssets.Cynoyi
 {
     /// <summary>
-    ///     <para>
-    ///         Implementation of <see cref="IEventHandler" />. Uses weak reference to hold the reference to subscriber.
-    ///     </para>
+    ///     Implementation of <see cref="IEventHandler" />. Uses weak reference to hold the reference to subscriber.
     /// </summary>
     internal class ReflectEventHandler : AbstractEventHandler
     {
         private readonly Dictionary<Type, MethodInfo> _supportedHandlers;
 
         /// <summary>
-        ///     <para>
-        ///         Initializes a new instance of <see cref="EventAggregator" /> with <see cref="IEventHandlerFactory" />.
-        ///     </para>
+        ///     Initializes a new instance of <see cref="EventAggregator" /> with <see cref="IEventHandlerFactory" />.
         /// </summary>
         /// <param name="subscriber">Object that want to subscribe.</param>
-        /// <remarks>
-        ///     <para>
-        ///         It is not recommend to use this directly. You should use <see cref="ReflectEventHandlerFactory" /> instead.
-        ///     </para>
-        /// </remarks>
         public ReflectEventHandler(ISubscriber subscriber) : base(subscriber)
         {
             _supportedHandlers = new Dictionary<Type, MethodInfo>();
@@ -40,9 +31,7 @@ namespace AvalonAssets.Cynoyi
         }
 
         /// <summary>
-        ///     <para>
-        ///         Gets All the <see cref="Type" /> that can handle by <see cref="IEventHandler" />.
-        ///     </para>
+        ///     Gets All the <see cref="Type" /> that can handle by <see cref="IEventHandler" />.
         /// </summary>
         /// <returns>All type the <see cref="IEventHandler" /> that can handle.</returns>
         public override IEnumerable<Type> Types => _supportedHandlers.Keys;

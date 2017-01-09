@@ -16,9 +16,7 @@ namespace AvalonAssets.Cynoyi
         public abstract IEnumerable<Type> Types { get; }
 
         /// <summary>
-        ///     <para>
-        ///         Check if <paramref name="instance" /> equals to its reference object.
-        ///     </para>
+        ///     Check if <paramref name="instance" /> equals to its reference object.
         /// </summary>
         /// <param name="instance">Object.</param>
         /// <returns>True if this handler is wraping <paramref name="instance" />.</returns>
@@ -28,9 +26,7 @@ namespace AvalonAssets.Cynoyi
         }
 
         /// <summary>
-        ///     <para>
-        ///         Handles <paramref name="message" /> of type <paramref name="messageType" />.
-        ///     </para>
+        ///     Handles <paramref name="message" /> of type <paramref name="messageType" />.
         /// </summary>
         /// <param name="messageType">Message type.</param>
         /// <param name="message">Message to be handle.</param>

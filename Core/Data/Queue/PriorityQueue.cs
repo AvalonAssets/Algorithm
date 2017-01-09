@@ -6,7 +6,7 @@ namespace AvalonAssets.Core.Data.Queue
     /// <summary>
     ///     Implementation of priority queue with <see cref="IHeap{T}" />.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Type.</typeparam>
     public class PriorityQueue<T>
     {
         private readonly IHeap<IPriority<T>> _heap;
@@ -21,7 +21,7 @@ namespace AvalonAssets.Core.Data.Queue
         public PriorityQueue(IHeap<IPriority<T>> heap = null)
         {
             if (heap == null)
-                heap = Heaps.Default(new PriorityComparer<T>());
+                heap = new BinaryHeap<IPriority<T>>(new PriorityComparer<T>());
             _heap = heap;
         }
 

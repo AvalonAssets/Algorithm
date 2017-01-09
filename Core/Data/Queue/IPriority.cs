@@ -1,5 +1,9 @@
 ﻿namespace AvalonAssets.Core.Data.Queue
 {
+    /// <summary>
+    ///     Represents an oject with priority.
+    /// </summary>
+    /// <typeparam name="T">Type.</typeparam>
     public interface IPriority<out T>
     {
         /// <summary>

@@ -1,21 +1,18 @@
 ﻿namespace AvalonAssets.Cynoyi
 {
     /// <summary>
-    ///     <para>
-    ///         Marker interface.
-    ///     </para>
+    ///     Marker interface.
     /// </summary>
     /// <remarks>
-    ///     <para>Do not use this. Use <see cref="ISubscriber{T}" /> instead.</para>
+    ///     Do not use this. Use <see cref="ISubscriber{T}" /> instead.
     /// </remarks>
     public interface ISubscriber
     {
     }
 
+    
     /// <summary>
-    ///     <para>
-    ///         Subscribes to message type <typeparamref name="T" />.
-    ///     </para>
+    ///     Subscribes to message type <typeparamref name="T" />.
     /// </summary>
     /// <typeparam name="T">Message type.</typeparam>
     /// <seealso cref="IEventAggregator" />
@@ -23,9 +20,7 @@
     public interface ISubscriber<in T> : ISubscriber
     {
         /// <summary>
-        ///     <para>
-        ///         Receives publish messages from <see cref="IEventAggregator" />.
-        ///     </para>
+        ///     Receives publish messages from <see cref="IEventAggregator" />.
         /// </summary>
         /// <param name="message">Message received.</param>
         void Receive(T message);

@@ -3,9 +3,11 @@
 namespace AvalonAssets.Core.Data.Queue
 {
     /// <summary>
-    ///     Default <see cref="IComparer{T}" /> used by <see cref="PriorityQueue{T}" />.
+    ///     <para>
+    ///         Default <see cref="IComparer{T}" /> used by <see cref="PriorityQueue{T}" />.
+    ///     </para>
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Type.</typeparam>
     public class PriorityComparer<T> : IComparer<IPriority<T>>
     {
         public int Compare(IPriority<T> x, IPriority<T> y)
