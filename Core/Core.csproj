@@ -38,7 +38,6 @@
     <Compile Include="Data\Heap\BinaryHeap.cs" />
     <Compile Include="Data\Heap\BinomialHeap.cs" />
     <Compile Include="Data\Heap\FibonacciHeap.cs" />
-    <Compile Include="Data\Heap\Heaps.cs" />
     <Compile Include="Data\Heap\IHeap.cs" />
     <Compile Include="Data\Heap\IHeapNode.cs" />
     <Compile Include="Data\Queue\IPriority.cs" />

@@ -51,10 +51,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="EventAggregatorTests.cs" />
-    <Compile Include="Heap\BinaryHeapTests.cs" />
-    <Compile Include="Heap\BinomialHeapTests.cs" />
-    <Compile Include="Heap\FibonacciHeapTests.cs" />
-    <Compile Include="Heap\HeapTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
