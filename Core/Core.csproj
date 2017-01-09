@@ -35,6 +35,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComparerReverser.cs" />
+    <Compile Include="ComparerWrapper.cs" />
     <Compile Include="Data\Heap\BinaryHeap.cs" />
     <Compile Include="Data\Heap\BinomialHeap.cs" />
     <Compile Include="Data\Heap\FibonacciHeap.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Log\LoggerExtensions.cs" />
     <Compile Include="Log\LogLevel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ComparerUtils.cs" />
     <Compile Include="Utility\DoubleUtils.cs" />
     <Compile Include="Utility\EnumUtils.cs" />
   </ItemGroup>

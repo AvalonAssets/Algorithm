@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using AvalonAssets.Core.Data.Heap;
+using AvalonAssets.Core.Utility;
 using NUnit.Framework;
 
 namespace AvalonAssets.CoreTests.Heap
@@ -35,8 +36,8 @@ namespace AvalonAssets.CoreTests.Heap
         [OneTimeSetUp]
         public virtual void Initialize()
         {
-            _minComparer = new Comparer((x, y) => x - y);
-            _maxComparer = new Comparer((x, y) => y - x);
+            _minComparer = Comparer<int>.Default;
+            _maxComparer = Comparer<int>.Default.Reverse();
         }
 
         public const int Range = 100;
@@ -158,21 +159,6 @@ namespace AvalonAssets.CoreTests.Heap
         protected IComparer<int> GetComparer(bool isMin)
         {
             return isMin ? _minComparer : _maxComparer;
-        }
-
-        private class Comparer : IComparer<int>
-        {
-            private readonly Func<int, int, int> _compareFunc;
-
-            public Comparer(Func<int, int, int> compareFunc)
-            {
-                _compareFunc = compareFunc;
-            }
-
-            public int Compare(int x, int y)
-            {
-                return _compareFunc(x, y);
-            }
         }
 
         [Test]
