@@ -8,7 +8,7 @@ notifications:
 install:
   - nuget restore Vola.sln
 script:
-  - xbuild /p:Configuration=Release Vola.sln
-  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./CoreTests/bin/Release/CoreTests.dll
-  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./CynoyiTests/bin/Release/CynoyiTests.dll
-  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./RojyTests/bin/Release/RojyTests.dll
+  - xbuild /p:Configuration=Debug Vola.sln
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./CoreTests/bin/Debug/CoreTests.dll
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./CynoyiTests/bin/Debug/CynoyiTests.dll
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./RojyTests/bin/Debug/RojyTests.dll
