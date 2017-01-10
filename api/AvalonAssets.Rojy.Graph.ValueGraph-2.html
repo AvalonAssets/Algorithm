@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ValueGraph&lt;TNode, TValue&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ValueGraph&lt;TNode, TValue&gt;
+   ">
+    <meta name="generator" content="docfx 2.10.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="AvalonAssets_Rojy_Graph_ValueGraph_2" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2">Class ValueGraph&lt;TNode, TValue&gt;
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html">Graph</a>&lt;TNode&gt;</div>
+                  <div class="level2"><span class="xref">ValueGraph&lt;TNode, TValue&gt;</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Connections">Graph&lt;TNode&gt;.Connections</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_AllowSelfLoops">Graph&lt;TNode&gt;.AllowSelfLoops</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Edges">Graph&lt;TNode&gt;.Edges</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_IsDirected">Graph&lt;TNode&gt;.IsDirected</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Degree__0_">Graph&lt;TNode&gt;.Degree(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_InDegree__0_">Graph&lt;TNode&gt;.InDegree(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_OutDegree__0_">Graph&lt;TNode&gt;.OutDegree(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Nodes">Graph&lt;TNode&gt;.Nodes</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Neighbors__0_">Graph&lt;TNode&gt;.Neighbors(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Predecessors__0_">Graph&lt;TNode&gt;.Predecessors(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Successors__0_">Graph&lt;TNode&gt;.Successors(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_AddNode__0_">Graph&lt;TNode&gt;.AddNode(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_RemoveNode__0_">Graph&lt;TNode&gt;.RemoveNode(TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_RemoveEdge__0__0_">Graph&lt;TNode&gt;.RemoveEdge(TNode, TNode)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Directed_System_Boolean_">Graph&lt;TNode&gt;.Directed(Boolean)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Undirected_System_Boolean_">Graph&lt;TNode&gt;.Undirected(Boolean)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Directed__1_System_Boolean_">Graph&lt;TNode&gt;.Directed&lt;TValue&gt;(Boolean)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Undirected__1_System_Boolean_">Graph&lt;TNode&gt;.Undirected&lt;TValue&gt;(Boolean)</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_ToString">Graph&lt;TNode&gt;.ToString()</a>
+                </div>
+                <div>
+                  <a class="xref" href="AvalonAssets.Rojy.Graph.Graph-1.html#AvalonAssets_Rojy_Graph_Graph_1_Pair__0__0_">Graph&lt;TNode&gt;.Pair(TNode, TNode)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:AvalonAssets.Rojy.Graph</h6>
+              <h6><strong>Assembly</strong>:AvalonAssets.Rojy.dll</h6>
+              <h5 id="AvalonAssets_Rojy_Graph_ValueGraph_2_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class ValueGraph&lt;TNode, TValue&gt; : Graph&lt;TNode&gt;, IMutableGraph&lt;TNode&gt;, IMutableValueGraph&lt;TNode, TValue&gt;, IValueGraph&lt;TNode, TValue&gt;, IGraph&lt;TNode&gt;</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TNode</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="parametername">TValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValue__0__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.Rojy.Graph.ValueGraph%602.EdgeValue(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/Rojy/Graph/ValueGraph.cs/#L16">View Source</a>
+              </span>
+              <a id="AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValue_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.EdgeValue*"></a>
+              <h4 id="AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValue__0__0_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.EdgeValue(`0,`0)">EdgeValue(TNode, TNode)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TValue EdgeValue(TNode nodeU, TNode nodeV)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeU</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeV</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.Rojy.Graph.IValueGraph-2.html#AvalonAssets_Rojy_Graph_IValueGraph_2_EdgeValue__0__0_">IValueGraph&lt;TNode, TValue&gt;.EdgeValue(TNode, TNode)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValueOrDefault__0__0__1_.md&amp;value=---%0Auid%3A%20AvalonAssets.Rojy.Graph.ValueGraph%602.EdgeValueOrDefault(%600%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/Rojy/Graph/ValueGraph.cs/#L24">View Source</a>
+              </span>
+              <a id="AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValueOrDefault_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.EdgeValueOrDefault*"></a>
+              <h4 id="AvalonAssets_Rojy_Graph_ValueGraph_2_EdgeValueOrDefault__0__0__1_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.EdgeValueOrDefault(`0,`0,`1)">EdgeValueOrDefault(TNode, TNode, TValue)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TValue EdgeValueOrDefault(TNode nodeU, TNode nodeV, TValue defaultValue)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeU</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeV</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td><span class="parametername">defaultValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.Rojy.Graph.IValueGraph-2.html#AvalonAssets_Rojy_Graph_IValueGraph_2_EdgeValueOrDefault__0__0__1_">IValueGraph&lt;TNode, TValue&gt;.EdgeValueOrDefault(TNode, TNode, TValue)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge__0__0_.md&amp;value=---%0Auid%3A%20AvalonAssets.Rojy.Graph.ValueGraph%602.PutEdge(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/Rojy/Graph/ValueGraph.cs/#L51">View Source</a>
+              </span>
+              <a id="AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.PutEdge*"></a>
+              <h4 id="AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge__0__0_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.PutEdge(`0,`0)">PutEdge(TNode, TNode)</h4>
+              <div class="markdown level1 summary"><p>This is a invalid operation in value graph.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool PutEdge(TNode nodeU, TNode nodeV)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeU</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeV</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">AvalonAssets.Rojy.Graph.Graph&lt;TNode&gt;.PutEdge(TNode, TNode)</span></div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.InvalidOperationException</span></td>
+                    <td><p>Always.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge__0__0__1_.md&amp;value=---%0Auid%3A%20AvalonAssets.Rojy.Graph.ValueGraph%602.PutEdge(%600%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/AvalonAssets/Vola/blob/master/Rojy/Graph/ValueGraph.cs/#L36">View Source</a>
+              </span>
+              <a id="AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.PutEdge*"></a>
+              <h4 id="AvalonAssets_Rojy_Graph_ValueGraph_2_PutEdge__0__0__1_" data-uid="AvalonAssets.Rojy.Graph.ValueGraph`2.PutEdge(`0,`0,`1)">PutEdge(TNode, TNode, TValue)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool PutEdge(TNode nodeU, TNode nodeV, TValue value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeU</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TNode</span></td>
+                    <td><span class="parametername">nodeV</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">TValue</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="AvalonAssets.Rojy.Graph.IMutableValueGraph-2.html#AvalonAssets_Rojy_Graph_IMutableValueGraph_2_PutEdge__0__0__1_">IMutableValueGraph&lt;TNode, TValue&gt;.PutEdge(TNode, TNode, TValue)</a></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="AvalonAssets.Rojy.PathFinding.html#AvalonAssets_Rojy_PathFinding_BreadthFirstSearch__1_AvalonAssets_Rojy_Graph_IGraph___0____0___0_">PathFinding.BreadthFirstSearch&lt;T&gt;(IGraph&lt;T&gt;, T, T)</a>
+              </div>
+              <div>
+                  <a class="xref" href="AvalonAssets.Rojy.PathFinding.html#AvalonAssets_Rojy_PathFinding_HeuristicSearch__1_AvalonAssets_Rojy_Graph_IGraph___0____0___0_AvalonAssets_Rojy_PathFinding_Heuristic___0__">PathFinding.HeuristicSearch&lt;T&gt;(IGraph&lt;T&gt;, T, T, PathFinding.Heuristic&lt;T&gt;)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/new/master/docfx_project/apispec/new?filename=AvalonAssets_Rojy_Graph_ValueGraph_2.md&amp;value=---%0Auid%3A%20AvalonAssets.Rojy.Graph.ValueGraph%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AvalonAssets/Vola/blob/master/Rojy/Graph/ValueGraph.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
