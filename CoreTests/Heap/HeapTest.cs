@@ -72,7 +72,7 @@ namespace AvalonAssets.CoreTests.Heap
                 heap.Insert(num);
             var heapList = new List<int>();
             while (!heap.IsEmpty)
-                heapList.Add(heap.ExtractMin().Value);
+                heapList.Add(heap.Extract().Value);
             Console.WriteLine("isMin:" + isMin);
             Console.WriteLine("Expect:" + string.Join(", ", tmpLst));
             Console.WriteLine("Result:" + string.Join(", ", heapList));
@@ -84,11 +84,11 @@ namespace AvalonAssets.CoreTests.Heap
             var tmpLst = new List<int>(TestList);
             Console.WriteLine("isMin:" + isMin);
             var expected = isMin ? tmpLst.Min() : tmpLst.Max();
-            var result = heap.ExtractMin().Value;
+            var result = heap.Extract().Value;
             Console.WriteLine("Expect:" + expected + " Result:" + result);
             Assert.AreEqual(expected, result);
             expected = tmpLst.Count - 1;
-            result = heap.Size;
+            result = heap.Count;
             Console.WriteLine("Expect:" + expected + " Result:" + result);
             Assert.AreEqual(expected, result);
         }
@@ -98,7 +98,7 @@ namespace AvalonAssets.CoreTests.Heap
             var tmpLst = new List<int>(TestList);
             Console.WriteLine("isMin:" + isMin);
             var expected = isMin ? tmpLst.Min() : tmpLst.Max();
-            var result = heap.GetMin().Value;
+            var result = heap.Get().Value;
             Console.WriteLine("Expect:" + expected + " Result:" + result);
             Assert.AreEqual(expected, result);
         }
@@ -107,7 +107,7 @@ namespace AvalonAssets.CoreTests.Heap
         {
             var tmpLst = new List<int>(TestList);
             var expected = tmpLst.Count;
-            var result = heap.Size;
+            var result = heap.Count;
             Console.WriteLine("Expect:" + expected + " Result:" + result);
             Assert.AreEqual(expected, result);
         }
@@ -161,10 +161,10 @@ namespace AvalonAssets.CoreTests.Heap
         {
             if (isMin)
                 while (!MinHeap.IsEmpty)
-                    yield return MinHeap.ExtractMin().Value;
+                    yield return MinHeap.Extract().Value;
             else
                 while (!MaxHeap.IsEmpty)
-                    yield return MaxHeap.ExtractMin().Value;
+                    yield return MaxHeap.Extract().Value;
         }
 
         protected IComparer<int> GetComparer(bool isMin)

@@ -45,7 +45,7 @@ namespace AvalonAssets.CoreTests.Heap
             var newHeap = new BinaryHeap<int>(GetComparer(isMin), TestList);
             var heapList = new List<int>();
             while (!newHeap.IsEmpty)
-                heapList.Add(newHeap.ExtractMin().Value);
+                heapList.Add(newHeap.Extract().Value);
             Console.WriteLine("isMin:" + isMin);
             Console.WriteLine("Expect:" + string.Join(", ", tmpLst));
             Console.WriteLine("Result:" + string.Join(", ", heapList));

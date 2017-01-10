@@ -18,7 +18,7 @@ namespace AvalonAssets.Core.Data.Heap
         public FibonacciHeap(IComparer<T> comparer)
         {
             _minNode = null;
-            Size = 0;
+            Count = 0;
             _comparer = comparer;
         }
 
@@ -26,11 +26,11 @@ namespace AvalonAssets.Core.Data.Heap
         {
             var node = new Node<T>(element);
             _minNode = MergeLists(_minNode, node);
-            Size++;
+            Count++;
             return node;
         }
 
-        public IHeapNode<T> ExtractMin()
+        public IHeapNode<T> Extract()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");
@@ -46,7 +46,7 @@ namespace AvalonAssets.Core.Data.Heap
             }
             var nextInRootList = extractedMin.Next == extractedMin ? null : extractedMin.Next;
             RemoveNodeFromList(extractedMin);
-            Size--;
+            Count--;
             _minNode = MergeLists(nextInRootList, extractedMin.Child);
             if (nextInRootList == null) return extractedMin;
             _minNode = nextInRootList;
@@ -54,10 +54,10 @@ namespace AvalonAssets.Core.Data.Heap
             return extractedMin;
         }
 
-        public bool IsEmpty => Size == 0;
-        public int Size { get; private set; }
+        public bool IsEmpty => Count == 0;
+        public int Count { get; private set; }
 
-        public IHeapNode<T> GetMin()
+        public IHeapNode<T> Get()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");
@@ -91,7 +91,7 @@ namespace AvalonAssets.Core.Data.Heap
                 CascadingCut(parent);
             }
             _minNode = node;
-            ExtractMin();
+            Extract();
         }
 
         public IEnumerator<T> GetEnumerator()
@@ -113,7 +113,7 @@ namespace AvalonAssets.Core.Data.Heap
         public void Merge(FibonacciHeap<T> heap)
         {
             _minNode = MergeLists(_minNode, heap._minNode);
-            Size += heap.Size;
+            Count += heap.Count;
         }
 
         private void CascadingCut(Node<T> node)

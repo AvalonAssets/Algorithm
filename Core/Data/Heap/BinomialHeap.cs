@@ -33,7 +33,7 @@ namespace AvalonAssets.Core.Data.Heap
             return node;
         }
 
-        public IHeapNode<T> ExtractMin()
+        public IHeapNode<T> Extract()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");
@@ -56,9 +56,9 @@ namespace AvalonAssets.Core.Data.Heap
         }
 
         public bool IsEmpty => _head == null;
-        public int Size => IsEmpty ? 0 : _head.Count();
+        public int Count => IsEmpty ? 0 : _head.Count();
 
-        public IHeapNode<T> GetMin()
+        public IHeapNode<T> Get()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");

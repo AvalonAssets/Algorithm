@@ -31,31 +31,31 @@ namespace AvalonAssets.Core.Data.Heap
         {
             var node = new Node<T>(element);
             _heap.Add(node);
-            UpHeap(Size - 1);
+            UpHeap(Count - 1);
             return node;
         }
 
-        public IHeapNode<T> ExtractMin()
+        public IHeapNode<T> Extract()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");
             var min = _heap[0];
-            var last = Size - 1;
+            var last = Count - 1;
             _heap[0] = _heap[last];
             _heap.RemoveAt(last);
             DownHeap(0);
             return min;
         }
 
-        public IHeapNode<T> GetMin()
+        public IHeapNode<T> Get()
         {
             if (IsEmpty)
                 throw new InvalidOperationException("Empty heap");
             return _heap[0];
         }
 
-        public int Size => _heap.Count;
-        public bool IsEmpty => Size == 0;
+        public int Count => _heap.Count;
+        public bool IsEmpty => Count == 0;
 
         public void DecreaseKey(IHeapNode<T> element)
         {
@@ -70,18 +70,18 @@ namespace AvalonAssets.Core.Data.Heap
         public void Delete(IHeapNode<T> element)
         {
             var index = _heap.FindLastIndex(e => e.Equals(element));
-            if (index == 0 && Size == 1)
+            if (index == 0 && Count == 1)
             {
                 _heap.RemoveAt(index);
                 return;
             }
-            if (index == Size - 1)
+            if (index == Count - 1)
             {
                 _heap.RemoveAt(index);
                 return;
             }
-            Swap(index, Size - 1);
-            _heap.RemoveAt(Size - 1);
+            Swap(index, Count - 1);
+            _heap.RemoveAt(Count - 1);
             var parent = Parent(index);
             if (index != 0 && Compare(_heap[index], _heap[parent]) < 0)
                 UpHeap(index);
@@ -144,9 +144,9 @@ namespace AvalonAssets.Core.Data.Heap
                 var left = LeftChild(position);
                 var right = RightChild(position);
                 var smallest = position;
-                if (left < Size && Compare(_heap[left], _heap[smallest]) < 0)
+                if (left < Count && Compare(_heap[left], _heap[smallest]) < 0)
                     smallest = left;
-                if (right < Size && Compare(_heap[right], _heap[smallest]) < 0)
+                if (right < Count && Compare(_heap[right], _heap[smallest]) < 0)
                     smallest = right;
                 if (smallest == position)
                     break;
@@ -167,7 +167,7 @@ namespace AvalonAssets.Core.Data.Heap
 
         private void Build()
         {
-            for (var i = Size/2; i >= 0; i--)
+            for (var i = Count/2; i >= 0; i--)
                 DownHeap(i);
         }
 

@@ -18,8 +18,8 @@ namespace AvalonAssets.Core.Data.Heap
         ///     Returns number of values inside the heap.
         ///     Use <see cref="IsEmpty" /> instead if you want to check for empty.
         /// </summary>
-        /// <returns>Size of the heap.</returns>
-        int Size { get; }
+        /// <returns>Count of the heap.</returns>
+        int Count { get; }
 
         /// <summary>
         ///     Inserts a new value.
@@ -33,13 +33,13 @@ namespace AvalonAssets.Core.Data.Heap
         ///     If it is a max heap, it return the largest value.
         /// </summary>
         /// <returns> Minimum value.</returns>
-        IHeapNode<T> ExtractMin();
+        IHeapNode<T> Extract();
 
         /// <summary>
         ///     Returns the minimum value. Minimum value means root value.
         ///     If it is a max heap, it return the largest value.
         /// </summary>
-        IHeapNode<T> GetMin();
+        IHeapNode<T> Get();
 
         /// <summary>
         ///     Decreases an existing key to some value.

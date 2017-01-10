@@ -42,7 +42,7 @@ namespace AvalonAssets.Core.Data.Queue
         {
             if (_heap.IsEmpty)
                 throw new InvalidOperationException("PriorityWrapper Queue is empty.");
-            return _heap.ExtractMin().Value.Value;
+            return _heap.Extract().Value.Value;
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace AvalonAssets.Core.Data.Queue
         {
             if (_heap.IsEmpty)
                 throw new InvalidOperationException("PriorityWrapper Queue is empty.");
-            return _heap.GetMin().Value.Value;
+            return _heap.Get().Value.Value;
         }
 
         /// <summary>
