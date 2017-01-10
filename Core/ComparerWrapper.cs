@@ -5,16 +5,16 @@ namespace AvalonAssets.Core
 {
     public class ComparerWrapper<T> : IComparer<T>
     {
-        private readonly Func<T, T, int> _compareFunc;
+        private readonly Comparison<T> _comparison;
 
-        public ComparerWrapper(Func<T, T, int> compareFunc)
+        public ComparerWrapper(Comparison<T> comparison)
         {
-            _compareFunc = compareFunc;
+            _comparison = comparison;
         }
 
         public int Compare(T x, T y)
         {
-            return _compareFunc(x, y);
+            return _comparison(x, y);
         }
     }
 }
