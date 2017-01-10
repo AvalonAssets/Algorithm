@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using AvalonAssets.Core;
 using AvalonAssets.Core.Data.Heap;
 using AvalonAssets.Core.Utility;
 using NUnit.Framework;
