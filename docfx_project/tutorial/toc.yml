@@ -1,18 +1,22 @@
 - name: Introduction
   href: intro.md
-- name: Event
+- name: Core
+  homepage: core/core.md
   items:
-  - name: Event Aggregator
-    href: event/event_aggregator.md
-- name: Graphic
+    - name: Data Structure
+      items:
+        - name: Heap
+          href: core/heap.md
+        - name: Queue
+          href: core/queue.md
+    - name: Log
+      href: core/log.md
+- name: Cynoyi
+  homepage: cynoyi/cynoyi.md
+  items:
+    - name: Event Aggregator
+      href: cynoyi/event_aggregator.md
+- name: Rojy
   items:
   - name: Path Finding
-    href: graphic/path_finding.md
-- name: Dependency Injection
-  items:
-  - name: IoC Container
-    href: injection/container.md
-  - name: Constructor
-    href: injection/constructor.md
-  - name: Parameter
-    href: injection/parameter.md
+    href: rojy/path_finding.md

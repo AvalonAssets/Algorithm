@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace AvalonAssets.Core.Utility
+namespace AvalonAssets.Core
 {
-    public static class ComparerUtils
+    public static class ComparerExtensions
     {
         public static IComparer<T> Reverse<T>(this IComparer<T> comparer)
         {
