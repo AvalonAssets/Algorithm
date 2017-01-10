@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using AvalonAssets.Core.Data.Heap;
 
 namespace AvalonAssets.Core.Data.Queue
@@ -7,7 +10,7 @@ namespace AvalonAssets.Core.Data.Queue
     ///     Implementation of priority queue with <see cref="IHeap{T}" />.
     /// </summary>
     /// <typeparam name="T">Type.</typeparam>
-    public class PriorityQueue<T>
+    public class PriorityQueue<T>: IEnumerable<T>
     {
         private readonly IHeap<IPriority<T>> _heap;
 
@@ -70,6 +73,16 @@ namespace AvalonAssets.Core.Data.Queue
         public void Enqueue(int priority, T @object)
         {
             _heap.Insert(new PriorityWrapper<T>(priority, @object));
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return _heap.Select(elements => elements.Value).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
