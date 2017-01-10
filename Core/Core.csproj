@@ -35,7 +35,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComparerReverser.cs" />
     <Compile Include="ComparerWrapper.cs" />
     <Compile Include="Data\Heap\BinaryHeap.cs" />
     <Compile Include="Data\Heap\BinomialHeap.cs" />

@@ -146,6 +146,17 @@ namespace AvalonAssets.CoreTests.Heap
             Assert.IsTrue(tmpLst.SequenceEqual(heapList));
         }
 
+        public void EnumerableTest(IHeap<int> heap, bool isMin)
+        {
+            var num = RandomNumber();
+            var tmpLst = new List<int>(TestList) { num };
+            tmpLst.Sort();
+            if (!isMin)
+                tmpLst.Reverse();
+            heap.Insert(num);
+            CollectionAssert.AreEqual(tmpLst, heap.ToList());
+        }
+
         protected IEnumerable<int> GetHeapList(bool isMin)
         {
             if (isMin)
@@ -159,6 +170,13 @@ namespace AvalonAssets.CoreTests.Heap
         protected IComparer<int> GetComparer(bool isMin)
         {
             return isMin ? _minComparer : _maxComparer;
+        }
+
+        [Test]
+        public void EnumerableTest()
+        {
+            EnumerableTest(MinHeap, true);
+            EnumerableTest(MaxHeap, false);
         }
 
         [Test]

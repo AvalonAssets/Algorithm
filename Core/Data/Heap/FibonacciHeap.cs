@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AvalonAssets.Core.Data.Heap
 {
@@ -90,6 +92,18 @@ namespace AvalonAssets.Core.Data.Heap
             }
             _minNode = node;
             ExtractMin();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var list = GetRootTrees().Select(n => n.Value).ToList();
+            list.Sort(_comparer);
+            return list.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         /// <summary>

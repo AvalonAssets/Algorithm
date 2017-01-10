@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace AvalonAssets.Core.Data.Heap
@@ -97,6 +98,18 @@ namespace AvalonAssets.Core.Data.Heap
                 }
                 RemoveTreeRoot(node, prev);
             }
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var list = GetNodesValue(_head);
+            list.Sort(_comparer);
+            return list.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         private int Compare(IHeapNode<T> left, IHeapNode<T> right)
@@ -230,6 +243,17 @@ namespace AvalonAssets.Core.Data.Heap
             }
             tail.Sibling = heap1Next ?? heap2Next;
             return head;
+        }
+
+        private static List<T> GetNodesValue(Node<T> node)
+        {
+            var list = new List<T>();
+            if (node == null)
+                return list;
+            list.Add(node.Value);
+            list.AddRange(GetNodesValue(node.Sibling));
+            list.AddRange(GetNodesValue(node.Child));
+            return list;
         }
 
         private class Node<TValue> : IHeapNode<TValue>

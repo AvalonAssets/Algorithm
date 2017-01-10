@@ -1,10 +1,12 @@
-﻿namespace AvalonAssets.Core.Data.Heap
+﻿using System.Collections.Generic;
+
+namespace AvalonAssets.Core.Data.Heap
 {
     /// <summary>
     ///     Heap interface.
     /// </summary>
     /// <typeparam name="T">Type.</typeparam>
-    public interface IHeap<T>
+    public interface IHeap<T> : IEnumerable<T>
     {
         /// <summary>
         ///     Returns if the heap is empty.

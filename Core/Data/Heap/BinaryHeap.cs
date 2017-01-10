@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AvalonAssets.Core.Data.Heap
 {
@@ -85,6 +87,18 @@ namespace AvalonAssets.Core.Data.Heap
                 UpHeap(index);
             else
                 DownHeap(index);
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            var valueList = _heap.Select(n => n.Value).ToList();
+            valueList.Sort(_comparer);
+            return valueList.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         private static int Parent(int index)
