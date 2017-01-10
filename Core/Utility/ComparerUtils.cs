@@ -6,7 +6,7 @@ namespace AvalonAssets.Core.Utility
     {
         public static IComparer<T> Reverse<T>(this IComparer<T> comparer)
         {
-            return new ComparerReverser<T>(comparer);
+            return new ComparerWrapper<T>((x, y) => comparer.Compare(y, x));
         }
     }
 }
