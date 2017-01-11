@@ -104,10 +104,9 @@ namespace AvalonAssets.Cynoyi
         public void Publish<T>(T message)
         {
             var messageType = typeof(T);
-            IEventHandler[] toNotify;
             if (!_eventHandlers.ContainsKey(messageType))
                 return;
-            toNotify = _eventHandlers[messageType].Where(h => h.CanHandle(messageType)).ToArray();
+            var toNotify = _eventHandlers[messageType].Where(h => h.CanHandle(messageType)).ToArray();
             // Publishes message
             var dead = toNotify.Where(h => !h.Handle(messageType, message)).ToList();
             if (!dead.Any()) return;
