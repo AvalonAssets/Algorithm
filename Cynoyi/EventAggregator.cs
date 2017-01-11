@@ -53,9 +53,7 @@ namespace AvalonAssets.Cynoyi
             var checkAdded = false;
             foreach (var type in handler.Types)
             {
-                if (!_eventHandlers.ContainsKey(type))
-                    _eventHandlers.AddOrUpdate(type, new HashSet<IEventHandler>(), (key, value) => value);
-                var typeSet = _eventHandlers.GetOrAdd(type, new HashSet<IEventHandler>());
+                var typeSet = _eventHandlers.GetOrAdd(type, k => new HashSet<IEventHandler>());
                 // Does not allow double subscribe
                 lock (typeSet)
                 {
@@ -86,7 +84,7 @@ namespace AvalonAssets.Cynoyi
             {
                 if (!_eventHandlers.ContainsKey(type))
                     continue;
-                var typeSet = _eventHandlers.GetOrAdd(type, new HashSet<IEventHandler>());
+                var typeSet = _eventHandlers.GetOrAdd(type, k => new HashSet<IEventHandler>());
                 lock (typeSet)
                 {
                     typeSet.RemoveWhere(h => h.Matches(subscriber));
@@ -117,7 +115,7 @@ namespace AvalonAssets.Cynoyi
             foreach (var handler in dead)
             foreach (var type in handler.Types)
             {
-                var typeSet = _eventHandlers.GetOrAdd(type, new HashSet<IEventHandler>());
+                var typeSet = _eventHandlers.GetOrAdd(type, k => new HashSet<IEventHandler>());
                 lock (typeSet)
                 {
                     typeSet.Remove(handler);
