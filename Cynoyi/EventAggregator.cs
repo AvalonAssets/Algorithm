@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,7 +14,7 @@ namespace AvalonAssets.Cynoyi
     {
         private readonly IEventHandlerFactory _eventHandlerFactory;
         // Registered event handlers
-        private readonly Dictionary<Type, HashSet<IEventHandler>> _eventHandlers;
+        private readonly ConcurrentDictionary<Type, HashSet<IEventHandler>> _eventHandlers;
 
         /// <summary>
         ///     <para>
@@ -25,7 +26,7 @@ namespace AvalonAssets.Cynoyi
         public EventAggregator(IEventHandlerFactory eventHandlerFactory)
         {
             _eventHandlerFactory = eventHandlerFactory;
-            _eventHandlers = new Dictionary<Type, HashSet<IEventHandler>>();
+            _eventHandlers = new ConcurrentDictionary<Type, HashSet<IEventHandler>>();
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace AvalonAssets.Cynoyi
                 foreach (var type in handler.Types)
                 {
                     if (!_eventHandlers.ContainsKey(type))
-                        _eventHandlers.Add(type, new HashSet<IEventHandler>());
+                        _eventHandlers.AddOrUpdate(type, new HashSet<IEventHandler>(), (key, value) => value);
                     var typeSet = _eventHandlers[type];
                     // Does not allow double subscribe
                     if (!checkAdded && typeSet.Any(h => h.Matches(subscriber)))
@@ -78,18 +79,15 @@ namespace AvalonAssets.Cynoyi
         {
             if (subscriber == null)
                 throw new ArgumentNullException(nameof(subscriber));
-            lock (_eventHandlers)
+            var handler = _eventHandlerFactory.Create(subscriber);
+            if (!handler.Types.Any())
+                return;
+            foreach (var type in handler.Types)
             {
-                var handler = _eventHandlerFactory.Create(subscriber);
-                if (!handler.Types.Any())
-                    return;
-                foreach (var type in handler.Types)
-                {
-                    if (!_eventHandlers.ContainsKey(type))
-                        continue;
-                    var typeSet = _eventHandlers[type];
-                    typeSet.RemoveWhere(h => h.Matches(subscriber));
-                }
+                if (!_eventHandlers.ContainsKey(type))
+                    continue;
+                var typeSet = _eventHandlers[type];
+                typeSet.RemoveWhere(h => h.Matches(subscriber));
             }
         }
 
@@ -107,22 +105,16 @@ namespace AvalonAssets.Cynoyi
         {
             var messageType = typeof(T);
             IEventHandler[] toNotify;
-            lock (_eventHandlers)
-            {
-                if (!_eventHandlers.ContainsKey(messageType))
-                    return;
-                toNotify = _eventHandlers[messageType].Where(h => h.CanHandle(messageType)).ToArray();
-            }
+            if (!_eventHandlers.ContainsKey(messageType))
+                return;
+            toNotify = _eventHandlers[messageType].Where(h => h.CanHandle(messageType)).ToArray();
             // Publishes message
             var dead = toNotify.Where(h => !h.Handle(messageType, message)).ToList();
             if (!dead.Any()) return;
             // Clean up
-            lock (_eventHandlers)
-            {
-                foreach (var handler in dead)
-                    foreach (var type in handler.Types)
-                        _eventHandlers[type].Remove(handler);
-            }
+            foreach (var handler in dead)
+            foreach (var type in handler.Types)
+                _eventHandlers[type].Remove(handler);
         }
     }
 }
